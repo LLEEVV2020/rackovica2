@@ -1,0 +1,19 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+body{
+	font-size: 1.8rem;
+}
+
+.container {
+	max-width: toRem($maxContainer);
+	min-width: toRem(320);
+	margin: 0 auto;
+	padding: 0 toRem(20);
+	@include media(min, xl) {
+		padding: 0 toRem(32);
+	}
+	@include media(min, xxl) {
+		padding: 0;
+	}
+}
